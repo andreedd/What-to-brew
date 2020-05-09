@@ -7,6 +7,8 @@
   <title>BREW BEER!</title>
   <meta name="beerbrew" content="beer">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
@@ -16,57 +18,67 @@
         DON'T KNOW WHAT BEER TO BREW? 
       </H1>
       <H2>
-        FIND OUT BELLOW!
+        FIND OUT BELOW!
       </H2>
+    </div>
+    <div style="text-align: center;">
+      <button onclick="fetch_beer(), toggleNone()">BREW A RANDOM BEER</button>
     </div>
   </header>
 
-  <button onclick="fetch_beer()">BREW A RANDOM BEER</button>
-
   <section class="descriptions">
-    <h3 id="beer_name"></h3>
+    <div class="text-box toggleNone" id="toggleNone">
+      <h3 id="beer_name"></h3>
 
-    <h4 id="beer_tagline"></h4>
-
-    <p id="beer_description"></p>
-
-    <p id="beer_food_pairing"></p>
-
-    <p id="beer_brewers_tips"></p>
-
-    <p id="beer_twist"></p>
-
-    <p id="beer_abv"></p>
-
-    <p id="beer_attenuation_level"></p>
+      <h4 id="beer_tagline"></h4>
+  
+      <p id="beer_description"></p>
+  
+      <p id="beer_food_pairing"></p>
+  
+      <p id="beer_brewers_tips"></p>
+  
+      <p id="beer_abv"></p>
+  
+      <p id="beer_attenuation_level"></p>
+    </div>
+    <div class="image-box">
+      <img class="image" id="img">
+    </div>
   </section>
 
-  <section class="instructions">
+  <section class="instructions toggleNone" id="toggleNone2">
     <h3 id="beer_ingredients"></h3>
 
-    <p id="beer_yeast"></p>
+    <div class="instructions-bg">
+      <p id="beer_yeast"></p>
 
-    <h3 id="malt"></h3>
+      <p id="beer_boil_volume"></p>
+  
+      <p id="beer_volume"></p>
+  
+      <p id="beer_fermentation"></p>
+  
+      <p id="beer_mesh_temp"></p>
+  
+      <p id="beer_twist"></p>
+    </div>
 
-    <p id="beer_malt"></p>
-
-    <h3 id="hops"></h3>
-
-    <p id="beer_hops"></p>
-
-    <p id="beer_boil_volume"></p>
-
-    <p id="beer_volume"></p>
-
-    <p id="beer_fermentation"></p>
-
-    <p id="beer_mesh_temp"></p>
+    <div class="seed-container">
+      <div class="malt">
+        <h4 id="malt"></h4>
+        <p id="beer_malt"></p>
+      </div>
+  
+      <div class="hops">
+        <h4 id="hops"></h4>
+        <p id="beer_hops"></p>
+      </div>
+    </div>
   </section>
 
-    <img id="img">
+  <script src="app.js">
 
-    <script src="app.js">
-
-    </script>
+  </script>
 </body>
 </html>

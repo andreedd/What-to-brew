@@ -1,20 +1,143 @@
+
+html{
+    font-family: 'Baloo Chettan 2', cursive;
+}
 body{
     display: grid;
-    grid-template-columns: 5vw 1fr 5vw;
+    grid-template-columns: 15vw 1fr 1fr 15vw;
+    grid-template-rows: auto;
     grid-template-areas: 
-    ". headline ."
-    ". descriptions ."
-    ". isntructions .";
+    ". headline headline ."
+    ". descriptions descriptions ."
+    ". instructions instructions .";
+}
+
+button{
+    margin-top: 10vh;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgb(65, 139, 139);
+    color: rgb(241, 241, 241);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: ease .3s;
+}
+
+.toggleNone{
+    display: none;
 }
 
 .headline{
     grid-area: headline;
+    padding-bottom: 5vh;
 }
 
 .descriptions{
     grid-area: descriptions;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    " text-box image-box ";
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+.text-box{
+    grid-area: text-box;
+    padding: 10px;
+    background-color: #EBEBEB;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+    box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+    color: rgb(31, 31, 31);
+    margin-top: 2vh;
+}
+
+div.text-box p{
+    background-color: rgb(221, 221, 221);
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+    box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.4);
+}
+
+.image-box{
+    grid-area: image-box;
+    text-align: center;
 }
 
 .instructions{
     grid-area: instructions;    
+    background-color: rgb(118, 135, 142);
+    color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    -moz-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
 }
+
+.instructions-bg{
+    background-color: rgb(141, 157, 157);
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    -moz-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+}
+
+.seed-container{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    " malt hops ";
+}
+
+.seed-container p {
+    background-color: rgb(141, 157, 157);
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    -moz-box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+    box-shadow: 2px 6px 17px -8px rgba(0,0,0,0.8);
+}
+
+.malt{
+    grid-area: malt;
+}
+
+.hops{
+    grid-area: hops;
+}
+
+.image{
+    grid-area: image;
+    max-height: 50vh;
+}
+
+@media screen and (max-width: 1000px) {
+    body{
+        grid-template-columns: 5vw 1fr 1fr 5vw;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    body{
+        grid-template-columns: 2vw 1fr 1fr 2vw;
+    }
+    .descriptions{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image-box"
+        " text-box";
+    }
+  }
