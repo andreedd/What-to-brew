@@ -10,16 +10,23 @@
 </head>
 
 <body>
-  <div style="text-align: center; padding-top: 8vh;">
-    <H1>
-      YOU DONT KNOW WHAT BEER TO BREW? 
-  </H1>
-  <H2>
-    FIND OUT BELLOW!
-  </H2>
-  </div>
+  <header class="headline">
+    <div style="text-align: center; padding-top: 5vh;">
+      <H1>
+        DON'T KNOW WHAT BEER TO BREW? 
+      </H1>
+      <H2>
+        FIND OUT BELLOW!
+      </H2>
+    </div>
+  </header>
 
-    <button onclick="fetch_beer()">BREW SOME BEER</button>
+  <button onclick="fetch_beer()">BREW A RANDOM BEER</button>
+
+  <section class="descriptions">
+    <h3 id="beer_name"></h3>
+
+    <h4 id="beer_tagline"></h4>
 
     <p id="beer_description"></p>
 
@@ -27,36 +34,39 @@
 
     <p id="beer_brewers_tips"></p>
 
-    <img id="img">
-
-    <h2 id="beer_ingredients"></h2>
-    <p id="beer_yeast"></p>
-
-    <p id="beer_hops"></p>
-
-    <p id="beer_malt"></p>
-
-    <p id="beer_boil_volume"></p>
-
-    <p id="beer_tagline"></p>
-
-    <p id="beer_name"></p>
+    <p id="beer_twist"></p>
 
     <p id="beer_abv"></p>
 
     <p id="beer_attenuation_level"></p>
+  </section>
+
+  <section class="instructions">
+    <h3 id="beer_ingredients"></h3>
+
+    <p id="beer_yeast"></p>
+
+    <h3 id="malt"></h3>
+
+    <p id="beer_malt"></p>
+
+    <h3 id="hops"></h3>
+
+    <p id="beer_hops"></p>
+
+    <p id="beer_boil_volume"></p>
 
     <p id="beer_volume"></p>
 
     <p id="beer_fermentation"></p>
 
     <p id="beer_mesh_temp"></p>
+  </section>
 
-    <p id="beer_twist"></p>
+    <img id="img">
 
     <script src="app.js">
-   
+
     </script>
-    
 </body>
 </html>
