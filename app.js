@@ -54,7 +54,7 @@ function fetch_beer() {
     fermentation = "<span style='font-weight:bold;'>Fermentation: </span>" + data[0].method.fermentation.temp.value + " " + data[0].method.fermentation.temp.unit;
     document.getElementById("beer_fermentation").innerHTML = fermentation;
 
-    mesh_temp = "<span style='font-weight:bold;'> Mesh cooking: </span>" + data[0].method.mash_temp[0].duration + " min at " + data[0].method.mash_temp[0].temp.value + " " + data[0].method.mash_temp[0].temp.unit;
+    mesh_temp = "<span style='font-weight:bold;'> Mash cooking: </span>" + data[0].method.mash_temp[0].duration + " min at " + data[0].method.mash_temp[0].temp.value + " " + data[0].method.mash_temp[0].temp.unit;
     document.getElementById("beer_mesh_temp").innerHTML = mesh_temp;
 
   });
